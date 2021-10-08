@@ -1,0 +1,7 @@
+#photo {
+    opacity: 100%;
+}
+
+#photo:hover {
+    filter: brightness(80%);
+}
