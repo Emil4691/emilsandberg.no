@@ -1,267 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<head>
 <title>ibtchip</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/stylesheet.css">
-<link rel="icon" href="images/icon.png">
+<link rel="icon" href="images/icon.jpg">
 <style>
-    body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-    body {font-size:16px;}
-    .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
-    .w3-half img:hover{opacity:1}
+body,h1 {font-family: "Montserrat", sans-serif}
+img {margin-bottom: -7px}
+.w3-row-padding img {margin-bottom: 12px}
 </style>
+</head>
 <body>
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
-    <div class="w3-container">
-        <h3 class="w3-padding-64"><b>ibtchip<br></b></h3>
-    </div>
-    <div class="w3-bar-block">
-        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
-        <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Photography</a>
-        <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About me</a>
-        <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Projects</a>
-        <!-- <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Packages</a> -->
-        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Socials</a>
-    </div>
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="index.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Photos</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">About</a>
+  </div>
 </nav>
 
-<!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
-    <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
-    <span>ibtchip</span>
-</header>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
 <!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:340px;margin-right:40px">
+<div class="w3-content" style="max-width:1500px">
 
-    <!-- Header -->
-    <div class="w3-container" style="margin-top:80px" id="showcase">
-        <h1 class="w3-jumbo"><b>What I do:</b></h1>
-        <h1 class="w3-xxxlarge w3-text-red"><b>Photography.</b></h1>
-        <hr style="width:50px;border:5px solid red" class="w3-round">
-    </div>
-
-    <!-- Photo grid (modal) -->
-    <div class="w3-row-padding">
-        <div class="w3-half">
-            <img src="images/chicago.jpg" id="photo" style="width:100%" onclick="onClick(this)" alt="Sears Tower Chicago">
-            <img src="images/plane.jpg" id="photo" style="width:100%;" onclick="onClick(this)" alt="Norwegian 737-8 OSL">
-            <img src="images/arch.jpeg" id="photo" style="width:100%;" onclick="onClick(this)" alt="Arches National Park - Utah">
-        </div>
-
-        <div class="w3-half">
-            <img src="images/plane2.jpg" id="photo" style="width:100%;" onclick="onClick(this)" alt="SAS A320 OSL">
-            <img src="images/newyork.jpeg" id="photo" style="width:100%;" onclick="onClick(this)" alt="Empire State Building - Taken from Rockefeller Center New York">
-            <img src="images/plane3.jpg" id="photo" style="width:100%;" onclick="onClick(this)" alt="Norse 787-9 Dreamliner coming in for landing at OSL.">
-        </div>
-    </div>
-
-    <!-- Modal for full size images on click-->
-    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-        <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-            <img id="img01" class="w3-image">
-            <p id="caption"></p>
-        </div>
-    </div>
-
-    <!-- Services -->
-    <div class="w3-container" id="services" style="margin-top:75px">
-        <h1 class="w3-xxxlarge w3-text-red"><b>About me.</b></h1>
-        <hr style="width:50px;border:5px solid red" class="w3-round">
-        <p>From Oslo, Norway.</p>
-        <p>I am a full time student, studying at the Oslo Metropolitan University and I am working on a bachelor's degree in IT. After that I'll be working on a master degree specializing in Cyber Security.
-            I have always been a huge fan of technology and computers. I am especially interested in computers and computer hardware, but I also enjoy software and tweaking software the way I like it and spend a lot of time on configuring the "perfect setup". 
-            Other interests include photography, cars, boats, planes, and history! I love traveling and my destination of choice will always be the USA! I love playing video games! I am currently working part time as an accountant.
-            <br>
-            <br>
-            Camera:
-            <br>
-            Nikon D850
-            <br>
-            <br>
-            Lenses: 
-            <br>
-            AF Nikkor 80-200mm f/2.8
-            <br>
-            AF Nikkor 300mm f/4
-            <br>
-            AF Nikkor 35-70mm f/2.8
-            <br>
-            AF Nikkor 20mm f/2.8
-
-           <!-- <br>
-            <br>
-            PC Gear:
-            <br>
-            CPU: Intel Core i9 12900K
-            <br>
-            Motherboard: ASUS ROG STRIX Z690-F
-            <br>
-            GPU: ASUS RTX 3080 Ti 
-            <br>
-            RAM: Kingston Fury 5600mhz DDR5 32GB
-            <br>
-            CPU Cooler: Arctic Liquid Freezer II 420mm AIO
-            <br>
-            PSU: EVGA Supernova G6 1000W
-            <br>
-            Monitor 1: ASUS ROG PG258QN 360hz
-            <br>
-            Monitor 2: Samsung S24D390
-            <br>
-            Monitor 3: Samsung S24D390 
-            <br>
-            Headphones: Beyerdynamic DT 1990 Pro
-            <br>
-            Keyboard: Razer Huntsman V2 Analog 
-            <br>
-            Logitech G Pro X Superlight
-            <br>
-            Microphone: Røde NT-USB Studio + PSA1 + WS1
-            Webcam: Logitech Streamcam
-            <br>
-            Lighting: 2x Elgato Key Light Air -->
-
-        </p>
-    </div>
-
-    <!-- Designers -->
-    <div class="w3-container" id="designers" style="margin-top:75px">
-        <h1 class="w3-xxxlarge w3-text-red"><b>Projects.</b></h1>
-        <hr style="width:50px;border:5px solid red" class="w3-round">
-        <p>The projects I've worked on so far.</p>
-        <p>I don't have a lot of public work but the projects I've worked on so far include a few Discord bots and private projects. Other than that it's mostly small website projects, photography and minor video editing.
-            I also have experience in hosting Minecraft servers and configuring a lot of software stuff.
-        </p>
-        <p><b>Some projects here</b>:</p>
-    </div>
-
-    <!-- The Team -->
-    <div class="w3-row-padding w3-grayscale">
-        <div class="w3-col m4 w3-margin-bottom">
-            <div class="w3-light-grey">
-                <img src="images/ibot.jpg" alt="iBot" style="width:100%">
-                <div class="w3-container">
-                    <h3>iBot</h3>
-                    <p class="w3-opacity">Discord Bot made with Python</p>
-                    <p>This is my private Discord bot mainly used in my server, and my first Python project! Made with Discord.py</p>
-                </div>
-            </div>
-        </div>
-        <div class="w3-col m4 w3-margin-bottom">
-            <div class="w3-light-grey">
-                <img src="images/ibot2.jpg" alt="iBot V1" style="width:100%">
-                <div class="w3-container">
-                    <h3>iBot V1</h3>
-                    <p class="w3-opacity">Discord Bot made with JavaScript</p>
-                    <p>This is my first ever Discord bot, made with JavaScript and Discord.js</p>
-                </div>
-            </div>
-        </div>
-        <div class="w3-col m4 w3-margin-bottom">
-            <div class="w3-light-grey">
-                <img src="images/safari.png" alt="Safari Logo" style="width:100%">
-                <div class="w3-container">
-                    <h3>iOS Crasher</h3>
-                    <p class="w3-opacity">Webpage</p>
-                    <p>This is my instance of an old Safari exploit that used to crash your iPhone by loading the page.
-                        Can be found at: https://github.com/Emil4691/iOSCrasher
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Packages / Pricing Tables 
-    <div class="w3-container" id="packages" style="margin-top:75px">
-        <h1 class="w3-xxxlarge w3-text-red"><b>Packages.</b></h1>
-        <hr style="width:50px;border:5px solid red" class="w3-round">
-        <p>Some text our prices. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
-    </div>
-
-    <div class="w3-row-padding">
-        <div class="w3-half w3-margin-bottom">
-            <ul class="w3-ul w3-light-grey w3-center">
-                <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
-                <li class="w3-padding-16">Floorplanning</li>
-                <li class="w3-padding-16">10 hours support</li>
-                <li class="w3-padding-16">Photography</li>
-                <li class="w3-padding-16">20% furniture discount</li>
-                <li class="w3-padding-16">Good deals</li>
-                <li class="w3-padding-16">
-                    <h2>$ 199</h2>
-                    <span class="w3-opacity">per room</span>
-                </li>
-                <li class="w3-light-grey w3-padding-24">
-                    <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-                </li>
-            </ul>
-        </div>
-
-        <div class="w3-half">
-            <ul class="w3-ul w3-light-grey w3-center">
-                <li class="w3-red w3-xlarge w3-padding-32">Pro</li>
-                <li class="w3-padding-16">Floorplanning</li>
-                <li class="w3-padding-16">50 hours support</li>
-                <li class="w3-padding-16">Photography</li>
-                <li class="w3-padding-16">50% furniture discount</li>
-                <li class="w3-padding-16">GREAT deals</li>
-                <li class="w3-padding-16">
-                    <h2>$ 249</h2>
-                    <span class="w3-opacity">per room</span>
-                </li>
-                <li class="w3-light-grey w3-padding-24">
-                    <button class="w3-button w3-red w3-padding-large w3-hover-black">Sign Up</button>
-                </li>
-            </ul>
-        </div>
-    </div> -->
-
-    <!-- Contact -->
-    <div class="w3-container" id="contact" style="margin-top:75px">
-        <h1 class="w3-xxxlarge w3-text-red"><b>Socials.</b></h1>
-        <hr style="width:50px;border:5px solid red" class="w3-round">
-        <p>Here you can find my various social medias!</p>
-        <p>I stream sometimes on twitch.tv/ibtchip! I don't have a set schedule due to studying and a busy life but I stream once in a while when I feel like it!</p>
-        <p>I am active on Discord and you can find me at ibt#0001! <a href="https://discord.gg/HVTWK3qDNx">Discord Server!</a></p>
-        <p>You can find me on Instagram and Twitter at @ibtchip!</p>
-    </div>
-
-    <!-- End page content -->
+<!-- Header -->
+<div class="w3-opacity">
+<span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span> 
+<div class="w3-clear"></div>
+<header class="w3-center w3-margin-bottom">
+  <h1><b>ibtphoto</b></h1>
+  <p><b>Some of my favorite work can be seen below:</b></p>
+  <p class="w3-padding-16"><button class="w3-button w3-black" onclick="myFunction()">Toggle Grid Padding</button></p>
+</header>
 </div>
 
-<!-- W3.CSS Container -->
-<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+<!-- Photo Grid -->
+<div class="w3-row" id="myGrid" style="margin-bottom:128px">
+  <div class="w3-third">
+    <img src="images/747.jpg" style="width:100%">
+    <img src="images/787 2.jpg" style="width:100%">
+    <img src="images/787 3.jpg" style="width:100%">
+    <img src="images/787.jpg" style="width:100%">
+    <img src="images/bison.jpeg" style="width:100%">
+    <img src="images/chicago1.jpg" style="width:100%">
+    <img src="images/la.jpeg" style="width:100%">
+    <img src="images/norwegian.png" style="width:100%">
+    <img src="images/osl.jpg" style="width:100%">
+    <img src="images/railroad.jpg" style="width:100%">
+    <img src="images/sas3.jpg" style="width:100%">
+    <img src="images/tree.png" style="width:100%">
+    <img src="images/wrangler.jpg" style="width:100%">
+    <img src="images/yellowstone.png" style="width:100%">
+    <img src="images/park1.jpg" style="width:100%">
+    <img src="images/crane.jpg" style="width:100%">
+  </div>
 
+  <div class="w3-third">
+    <img src="images/chicago2.jpg" style="width:100%">
+    <img src="images/emirates1.png" style="width:100%">
+    <img src="images/emirates2.png" style="width:100%">
+    <img src="images/sas2.png" style="width:100%">
+    <img src="images/Fireworks.jpg" style="width:100%">
+    <img src="images/flb.jpeg" style="width:100%">
+    <img src="images/newyork.jpeg" style="width:100%">
+    <img src="images/norwegian2.png" style="width:100%">
+    <img src="images/osl2.jpg" style="width:100%">
+    <img src="images/sas.png" style="width:100%">
+    <img src="images/ship.jpg" style="width:100%">
+    <img src="images/utah.jpeg" style="width:100%">
+    <img src="images/wrangler2.jpeg" style="width:100%">
+    <img src="images/sailboat.jpg" style="width:100%">
+    <img src="images/park2.jpg" style="width:100%">
+    <img src="images/boats.jpg" style="width:100%">
+  </div>
+
+  <div class="w3-third">
+    <img src="images/frankfurt.jpg" style="width:100%">
+    <img src="images/hawaii.jpeg" style="width:100%">
+    <img src="images/hawaii2.jpeg" style="width:100%">
+    <img src="images/heli.jpeg" style="width:100%">
+    <img src="images/jmbarn.jpg" style="width:100%">
+    <img src="images/kassel.jpg" style="width:100%">
+    <img src="images/newyork2.jpeg" style="width:100%">
+    <img src="images/oldplane.jpg" style="width:100%">
+    <img src="images/plane.jpg" style="width:100%">
+    <img src="images/empire.jpeg" style="width:100%">
+    <img src="images/sunset.png" style="width:100%">
+    <img src="images/utahwindow.png" style="width:100%">
+    <img src="images/wrangler3.jpeg" style="width:100%">
+    <img src="images/bottle.jpg" style="width:100%">
+    <img src="images/duck.jpg" style="width:100%">
+  </div>
+</div>
+
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px"> 
+  <i class="fa fa-instagram w3-hover-opacity"> <a href="https://instagram.com/ibtphoto">ibtphoto</a></i>
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
 <script>
-    // Script to open and close sidebar
-    function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
-        document.getElementById("myOverlay").style.display = "block";
-    }
+// Toggle grid padding
+function myFunction() {
+  var x = document.getElementById("myGrid");
+  if (x.className === "w3-row") {
+    x.className = "w3-row-padding";
+  } else { 
+    x.className = x.className.replace("w3-row-padding", "w3-row");
+  }
+}
 
-    function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-        document.getElementById("myOverlay").style.display = "none";
-    }
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
 
-    // Modal Image Gallery
-    function onClick(element) {
-        document.getElementById("img01").src = element.src;
-        document.getElementById("modal01").style.display = "block";
-        var captionText = document.getElementById("caption");
-        captionText.innerHTML = element.alt;
-    }
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
 </script>
 
 </body>

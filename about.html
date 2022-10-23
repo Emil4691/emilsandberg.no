@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ibtchip</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/stylesheet.css">
+<style>
+body,h1 {font-family: "Montserrat", sans-serif}
+img {margin-bottom: -7px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="index.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Photos</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">About</a>
+  </div>
+</nav>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<div class="w3-opacity">
+<span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span> 
+<div class="w3-clear"></div>
+<header class="w3-center w3-margin-bottom">
+  <h1><b>ibtphoto</b></h1>
+</header>
+</div>
+
+<!-- Text -->
+
+<h3>Camera equipment:</h3>
+<ul>
+    <dt>Nikon D850</dt>
+    <dd>AF Nikkor 35-70mm f/2.8</dd>
+    <dd>AF Nikkor 80-200mm f/2.8 D</dd>
+    <dd>AF Nikkor 20mm f/2.8</dd>
+    <dd>AF Nikkor 300mm f/4</dd>
+    <dt><br>Extras:</dt>
+    <dd>Nikon 62mm Polarizing Filter</dd>
+    <dd>Nikon 62mm UV Filter</dd>
+    <dd>Nikon Speedlight SB-900</dd>
+    <dt><br>Samsung Galaxy S22 Ultra</dt>
+</ul>
+
+<h3>Computer Hardware</h3>
+<ul>
+    <dt>Desktop PC</dt>
+    <dd>Motherboard: ASUS Rog Strix Z690-F Gaming</dd>
+    <dd>Processor: Intel Core i9 12900K</dd>
+    <dd>RAM: Kingston Fury DDR5 32GB 5600mhz</dd>
+    <dd>Graphics Card: ASUS TUF RTX 3080 Ti</dd>
+    <dd>Storage: Corsair MP600 m.2 1TB</dd>
+    <dd>Storage 2: 2.5TB SSD + 1TB HDD</dd>
+    <dd>CPU Cooler: Arctic Liquid Freezer II 420mm AIO</dd>
+    <dd>PSU: EVGA Supernova G6 1000W</dd>
+    <dd>Case: Corsair 7000D Airflow</dd>
+    <dd>Case fans: 9x Arctic P12 PWM</dd>
+    <dt><br>Laptop</dt>
+    <dd>Apple Macbook Pro 16" 2020 Intel</dd>
+</ul>
+
+<h3>Peripherals and Monitors:</h3>
+<ul>
+    <dt>Equipment</dt>
+    <dd>Main monitor: ASUS Rog PG258QN 25" 360hz IPS</dd>
+    <dd>Side monitors: 2x Samsung S24D390 60hz</dd>
+    <dd>Headphones: Beyerdynamic DT 1990 Pro</dd>
+    <dd>Microphone: Røde NT USB + PSA1 Mic arm + WSA2 Pop filter</dd>
+    <dd>Elgato Stream Deck XL</dd>
+    <dd>Logitech Streamcam</dd>
+    <dd>2x Elgato Key Light Air</dd>
+    <dd>Mouse: Logitech G Pro X Superlight</dd>
+    <dd>Keyboard: Razer Huntsman Analog V2</dd>
+</ul>
+
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px"> 
+  <i class="fa fa-instagram w3-hover-opacity"> <a href="https://instagram.com/ibtphoto">ibtphoto</a></i>
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+<script>
+// Toggle grid padding
+function myFunction() {
+  var x = document.getElementById("myGrid");
+  if (x.className === "w3-row") {
+    x.className = "w3-row-padding";
+  } else { 
+    x.className = x.className.replace("w3-row-padding", "w3-row");
+  }
+}
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
